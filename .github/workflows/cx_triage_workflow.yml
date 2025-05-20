@@ -1,7 +1,8 @@
 name: CX Triage Workflow
 
 on:
-  workflow_dispatch:  # Allows manual triggering from GitHub UI
+  repository_dispatch:
+    types: [jira-trigger]
 
 jobs:
   run-checkmarx-onboarder:
